@@ -2,11 +2,24 @@
 body {
     background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
     min-height: 100vh;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Michroma', sans-serif;
     overflow-x: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+/* Style pour bloquer le scroll quand le menu est ouvert */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Classe spécifique pour la police Michroma */
+.font-michroma {
+    font-family: 'Michroma', sans-serif !important;
 }
 
 /* Styles pour l'effet parallax multi-couches */
@@ -62,7 +75,7 @@ body::after {
     position: absolute;
     width: 100%;
     height: 100%;
-    font-family: monospace;
+    font-family: 'Michroma', monospace;
     user-select: none;
     pointer-events: none;
 }
@@ -107,7 +120,7 @@ body::after {
 
 .floating-binary {
     position: absolute;
-    font-family: monospace;
+    font-family: 'Michroma', monospace;
     font-weight: bold;
     font-size: 0.8rem;
     color: #2e53a1;
@@ -569,6 +582,160 @@ iframe {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles pour le carrousel simple */
+.simple-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.simple-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.simple-carousel-item {
+    display: none;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.simple-carousel-item.active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Contrôles du carrousel */
+.simple-carousel-controls {
+    margin-top: 1rem;
+}
+
+.simple-carousel-prev,
+.simple-carousel-next {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.simple-carousel-prev:hover,
+.simple-carousel-next:hover {
+    background: #f8f8f8;
+    transform: scale(1.05);
+}
+
+.simple-carousel-prev:active,
+.simple-carousel-next:active {
+    transform: scale(0.95);
+}
+
+/* Points indicateurs */
+.simple-carousel-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.simple-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.simple-carousel-dot.active {
+    background: #2E5FAA;
+    transform: scale(1.2);
+}
+
+/* Styles responsive */
+@media (min-width: 768px) {
+    .simple-carousel-container {
+        max-width: 500px;
+    }
+}
+
+/* Styles pour le carrousel de shorts */
+.shorts-swiper {
+    width: 100%;
+    padding: 30px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-slide {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+/* Personnalisation des flèches de navigation */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #2E5FAA;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #2E5FAA;
+    color: white;
+}
+
+/* Personnalisation de la pagination */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #2E5FAA;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #2E5FAA;
+    transform: scale(1.2);
+}
+
 /* Animations globales */
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -741,6 +908,309 @@ h2 {
     position: relative;
 }
 
+
+
+/* Styles pour le carrousel en tube */
+.tube-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 70px;
+    overflow: hidden;
+}
+
+.tube-carousel-perspective {
+    perspective: 1000px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.tube-carousel-track {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.tube-carousel-slide {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 20%;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform-origin: center center;
+    transform: translateZ(-400px) rotateY(0deg);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.6s ease;
+    background: linear-gradient(135deg, #2E5FAA, #5A8AD3);
+}
+
+.tube-carousel-slide.active {
+    opacity: 1;
+    transform: translateZ(0) rotateY(0deg);
+    z-index: 10;
+}
+
+.tube-carousel-slide.prev {
+    opacity: 0.7;
+    transform: translateZ(-200px) translateX(-50%) rotateY(25deg);
+    z-index: 9;
+}
+
+.tube-carousel-slide.next {
+    opacity: 0.7;
+    transform: translateZ(-200px) translateX(50%) rotateY(-25deg);
+    z-index: 9;
+}
+
+.tube-carousel-slide.far-prev {
+    opacity: 0.3;
+    transform: translateZ(-400px) translateX(-90%) rotateY(45deg);
+    z-index: 8;
+}
+
+.tube-carousel-slide.far-next {
+    opacity: 0.3;
+    transform: translateZ(-400px) translateX(90%) rotateY(-45deg);
+    z-index: 8;
+}
+
+.tube-carousel-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 177.78%;
+    background-color: rgba(46, 95, 170, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.tube-carousel-content iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Contrôles du carrousel */
+.tube-carousel-controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.tube-carousel-prev,
+.tube-carousel-next {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #2E5FAA, #5A8AD3);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.tube-carousel-prev:hover,
+.tube-carousel-next:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tube-carousel-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.tube-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(90, 138, 211, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tube-dot.active {
+    background-color: #2E5FAA;
+    transform: scale(1.2);
+}
+
+/* Animation de tube */
+@keyframes tubeEffect {
+    0% { transform: scale(1) rotateY(0deg); filter: brightness(1); }
+    50% { transform: scale(1.05) rotateY(2deg); filter: brightness(1.1); }
+    100% { transform: scale(1) rotateY(0deg); filter: brightness(1); }
+}
+
+/* Particules pour l'effet de tube */
+.tube-particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.tube-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 5;
+    box-shadow: 0 0 10px 2px rgba(90, 138, 211, 0.8);
+    animation: particleAnimation 8s linear infinite;
+}
+
+.tube-particle.p1 { top: 10%; left: 45%; animation-delay: 0s; }
+.tube-particle.p2 { top: 20%; left: 30%; animation-delay: 0.8s; }
+.tube-particle.p3 { top: 30%; left: 70%; animation-delay: 1.6s; }
+.tube-particle.p4 { top: 40%; left: 20%; animation-delay: 2.4s; }
+.tube-particle.p5 { top: 50%; left: 80%; animation-delay: 3.2s; }
+.tube-particle.p6 { top: 60%; left: 40%; animation-delay: 4s; }
+.tube-particle.p7 { top: 70%; left: 60%; animation-delay: 4.8s; }
+.tube-particle.p8 { top: 80%; left: 25%; animation-delay: 5.6s; }
+.tube-particle.p9 { top: 90%; left: 75%; animation-delay: 6.4s; }
+.tube-particle.p10 { top: 15%; left: 55%; animation-delay: 7.2s; }
+
+@keyframes particleAnimation {
+    0% {
+        transform: translateZ(-100px) scale(0.1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateZ(400px) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Effet de tunnel */
+.tube-carousel-perspective::before,
+.tube-carousel-perspective::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.tube-carousel-perspective::before {
+    box-shadow: inset 0 0 100px rgba(46, 95, 170, 0.7);
+    animation: tubePulse 5s infinite alternate;
+}
+
+.tube-carousel-perspective::after {
+    background: radial-gradient(circle at center, transparent 60%, rgba(46, 95, 170, 0.3) 100%);
+    mix-blend-mode: overlay;
+}
+
+/* Effet de lueur pour le tube */
+.tube-carousel-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(46, 95, 170, 0) 0%, 
+        rgba(90, 138, 211, 0.2) 25%, 
+        rgba(90, 138, 211, 0.2) 75%, 
+        rgba(46, 95, 170, 0) 100%);
+    z-index: 40;
+    pointer-events: none;
+    animation: tubeGlow 8s infinite alternate;
+}
+
+@keyframes tubeGlow {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+@keyframes tubePulse {
+    0% { box-shadow: inset 0 0 100px rgba(46, 95, 170, 0.5); }
+    100% { box-shadow: inset 0 0 150px rgba(46, 95, 170, 0.8); }
+}
+
+/* Effet de flou pour renforcer la profondeur */
+.tube-carousel-slide.prev,
+.tube-carousel-slide.next {
+    filter: blur(1px);
+}
+
+.tube-carousel-slide.far-prev,
+.tube-carousel-slide.far-next {
+    filter: blur(2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tube-carousel-perspective {
+        height: 300px;
+    }
+    
+    .tube-carousel-slide {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tube-carousel-perspective {
+        height: 250px;
+    }
+    
+    .tube-carousel-slide {
+        width: 90%;
+        left: 5%;
+    }
+    
+    .tube-carousel-prev,
+    .tube-carousel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
 h2::after {
     content: '';
     position: absolute;
@@ -873,10 +1343,190 @@ footer {
     transform-origin: left;
 }
 
+/* Carousel Customization */
+/* Structure de base */
+#shorts {
+  padding-bottom: 80px; /* Espace réduit pour les contrôles du carrousel */
+  position: relative;
+}
+
+/* Perspective pour l'effet 3D */
+#shorts .container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+/* Style pour le conteneur des shorts centré */
+#shorts .container > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Styles pour les shorts au format 9:16 */
+/* Styles pour le carrousel circulaire avec focus */
+.circular-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.circular-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 220px;
+  height: 390px;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  filter: brightness(0.7) blur(1px);
+  transform-origin: center center;
+}
+
+/* Positions des éléments sur le cercle */
+.carousel-item[data-index="0"] {
+  transform: rotateY(0deg) translateZ(350px) scale(1.2);
+  z-index: 10;
+  filter: brightness(1) blur(0);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item[data-index="1"] {
+  transform: rotateY(120deg) translateZ(300px) scale(0.8);
+  z-index: 5;
+}
+
+.carousel-item[data-index="2"] {
+  transform: rotateY(240deg) translateZ(300px) scale(0.8);
+  z-index: 5;
+}
+
+/* Styles pour les iframes dans le carrousel */
+#shorts iframe {
+  border-radius: 16px;
+  max-width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+  background-color: #000;
+}
+
+/* Styles pour les contrôles du carrousel */
+.carousel-controls {
+  margin-top: 30px;
+}
+
+.control-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-indicators {
+  display: flex;
+  align-items: center;
+}
+
+.indicator {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.indicator.active {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.indicator:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+/* Effet de focus et de flou */
+.circular-carousel:hover .carousel-item[data-index="0"] {
+  transform: rotateY(0deg) translateZ(380px) scale(1.25);
+}
+
+/* Animation de rotation pour l'effet 3D */
+@keyframes floatAnimation {
+  0% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-10px) rotateY(2deg); }
+  100% { transform: translateY(0) rotateY(0deg); }
+}
+
+/* Styles responsive pour le carrousel */
+@media (max-width: 768px) {
+  .circular-carousel-container {
+    height: 500px;
+  }
+  
+  .carousel-item {
+    width: 180px;
+    height: 320px;
+  }
+  
+  .carousel-item[data-index="0"] {
+    transform: rotateY(0deg) translateZ(250px) scale(1.1);
+  }
+  
+  .carousel-item[data-index="1"],
+  .carousel-item[data-index="2"] {
+    transform: rotateY(0deg) translateZ(200px) scale(0.7);
+    opacity: 0.5;
+  }
+}
+
 /* Animation des sections de présentation */
 .space-y-6 {
     opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Media query pour réduire la taille de police à 1280px et moins */
+@media (max-width: 1280px) {
+    html, body {
+        font-size: 14px; /* Taille de base réduite */
+    }
+    
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    p, li, a {
+        font-size: 0.9rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+    }
 }
 
 .relative img {
@@ -908,6 +1558,17 @@ footer {
 @keyframes fadeInRight {
     from {
         opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
         transform: translateX(50px);
     }
     to {

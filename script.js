@@ -5,7 +5,6 @@ const originalAddEventListener = EventTarget.prototype.addEventListener;
 EventTarget.prototype.addEventListener = function(type, listener, options) {
     if (type === 'unload' || type === 'beforeunload') {
         // Ne pas ajouter l'écouteur d'événement déprécié
-        console.log('Écouteur d\'événement déprécié évité:', type);
         return;
     }
     return originalAddEventListener.call(this, type, listener, options);
@@ -209,7 +208,134 @@ function handleScrollAnimations() {
 // Initialisation des animations
 document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimations();
+    initShortsCarousel();
 });
+
+// Fonction d'initialisation du carrousel simple
+function initShortsCarousel() {
+    const carousel = document.querySelector('.simple-carousel');
+    const items = document.querySelectorAll('.simple-carousel-item');
+    const prevBtn = document.querySelector('.simple-carousel-prev');
+    const nextBtn = document.querySelector('.simple-carousel-next');
+    const dots = document.querySelectorAll('.simple-carousel-dot');
+    
+    if (!carousel || items.length === 0) return;
+    
+    let currentIndex = 0;
+    let autoRotateInterval;
+    
+    // Fonction pour afficher un élément spécifique
+    function showItem(index) {
+        // Masquer tous les éléments
+        items.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Afficher l'élément actif
+        items[index].classList.add('active');
+        
+        // Mettre à jour les indicateurs
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+                dot.classList.add('bg-[#2E5FAA]');
+                dot.classList.remove('bg-gray-300');
+            } else {
+                dot.classList.remove('active');
+                dot.classList.remove('bg-[#2E5FAA]');
+                dot.classList.add('bg-gray-300');
+            }
+        });
+        
+        currentIndex = index;
+    }
+    
+    // Fonction pour passer au short suivant
+    function nextShort() {
+        const newIndex = (currentIndex + 1) % items.length;
+        showItem(newIndex);
+    }
+    
+    // Fonction pour passer au short précédent
+    function prevShort() {
+        const newIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(newIndex);
+    }
+    
+    // Ajouter les écouteurs d'événements pour les boutons de navigation
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+        nextShort();
+        resetAutoRotate();
+    });
+    
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+        prevShort();
+        resetAutoRotate();
+    });
+    
+    // Ajouter les écouteurs d'événements pour les indicateurs
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            if (index !== currentIndex) {
+                showItem(index);
+                resetAutoRotate();
+            }
+        });
+    });
+    
+    // Démarrer la rotation automatique
+    function startAutoRotate() {
+        autoRotateInterval = setInterval(nextShort, 5000);
+    }
+    
+    // Réinitialiser la rotation automatique
+    function resetAutoRotate() {
+        clearInterval(autoRotateInterval);
+        startAutoRotate();
+    }
+    
+    // Arrêter la rotation automatique lors de l'interaction
+    function stopAutoRotate() {
+        clearInterval(autoRotateInterval);
+    }
+    
+    // Ajouter des écouteurs pour arrêter/démarrer la rotation automatique
+    carousel.addEventListener('mouseenter', stopAutoRotate);
+    carousel.addEventListener('mouseleave', startAutoRotate);
+    
+    // Initialiser le carrousel
+    showItem(0);
+    startAutoRotate();
+    
+    // Support des gestes tactiles
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50; // Seuil de détection du swipe
+        
+        if (touchEndX < touchStartX - swipeThreshold) {
+            // Swipe vers la gauche - next
+            nextShort();
+            resetAutoRotate();
+        }
+        
+        if (touchEndX > touchStartX + swipeThreshold) {
+            // Swipe vers la droite - previous
+            prevShort();
+            resetAutoRotate();
+        }
+    }
+}
 
 // Gestion du curseur personnalisé
 document.addEventListener('DOMContentLoaded', () => {

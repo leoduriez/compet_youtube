@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos de Moi - Votre Chaîne YouTube</title>
-    <meta name="description" content="Découvrez l'équipe derrière ce projet de chaîne YouTube">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content">
+    <title>À Propos de Nous - Votre Chaîne YouTube</title>
+    <meta name="description" content="Découvrez l'équipe derrière notre chaîne YouTube. Rencontrez nos développeurs, spécialistes marketing et équipe visuelle.">
+    <meta name="keywords" content="équipe youtube, à propos, chaîne youtube, équipe créative">
+    <meta name="author" content="Votre Chaîne">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="À Propos de Nous - Votre Chaîne YouTube">
+    <meta property="og:description" content="Découvrez l'équipe derrière notre chaîne YouTube.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.votrechaineyt.com/about.html">
+    <meta property="og:image" content="images/logo_v3.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect pour améliorer les performances -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Styles CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100">
+<body class="font-michroma">
     <!-- Fond binaire animé -->
     <!-- Fond parallax multi-couches -->
     <div class="parallax-container fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
@@ -76,7 +96,7 @@
         <div class="container mx-auto px-4">
             <div class="nav-wrapper flex justify-between items-center h-16">
                 <a href="index.html" class="nav-logo">
-                    <img src="images/logo_v3.png" alt="Logo" class="h-8 mr-2">
+                    <img loading="lazy" src="images/logo_v3.png" alt="Logo" class="h-8 mr-2" width="32" height="32">
                 </a>
 
                 <!-- Menu Burger pour Mobile -->
@@ -104,97 +124,89 @@
     <header class="pt-24 pb-12 bg-gradient-to-r from-[#232e5b]/90 via-[#2e53a1]/90 to-[#376eb5]/90">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">À Propos de Nous</h1>
-            <p class="text-xl text-white/80">Découvrez l'équipe derrière ce projet</p>
+            <p class="text-xl text-white/80 font-michroma">Découvrez l'équipe derrière ce projet</p>
         </div>
     </header>
 
     <main class="py-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden font-michroma">
                 <div class="p-8">
-                    <h2 class="text-3xl font-bold mb-6 text-center">Notre Équipe</h2>
+                    <h2 class="text-3xl font-bold mb-6 text-center font-michroma">Notre Équipe</h2>
                     
-                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA]">Développeurs Web</h3>
+                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA] font-michroma">Développeurs Web</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Développeur 1]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Développeur 1]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Développeur 1]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Développeur Web</p>
-                            <p class="text-gray-600 italic">Responsable du développement frontend et de l'intégration des éléments interactifs.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> Duriez</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> Léo</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> B1DEV</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Développeur Web</p>
                         </div>
                         
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Développeur 2]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Développeur 2]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Développeur 2]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Développeur Web</p>
-                            <p class="text-gray-600 italic">Chargé de l'architecture technique, de l'optimisation des performances et de la compatibilité cross-browser.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> Diarra</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> Aliou</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> B1DEV</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Développeur Web</p>
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA]">Marketing & Stratégie</h3>
+                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA] font-michroma">Marketing & Stratégie</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Marketing 1]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Marketing 1]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Marketing 1]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
-                            <p class="text-gray-600 italic">Responsable de la stratégie de contenu et du positionnement de la chaîne.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> [Nom Marketing 1]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> [Prénom Marketing 1]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> [Classe Marketing 1]</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
                         </div>
                         
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Marketing 2]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Marketing 2]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Marketing 2]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
-                            <p class="text-gray-600 italic">Chargé de l'analyse des tendances et de l'optimisation SEO.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> [Nom Marketing 2]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> [Prénom Marketing 2]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> [Classe Marketing 2]</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
                         </div>
                         
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Marketing 3]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Marketing 3]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Marketing 3]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
-                            <p class="text-gray-600 italic">Responsable des partenariats et de la croissance de l'audience.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> [Nom Marketing 3]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> [Prénom Marketing 3]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> [Classe Marketing 3]</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA]">Équipe Visuelle</h3>
+                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA] font-michroma">Équipe Visuelle</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Visuel 1]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Visuel 1]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Visuel 1]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Visuel</p>
-                            <p class="text-gray-600 italic">Designer UI/UX responsable de l'identité visuelle du site.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> [Nom Visuel 1]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> [Prénom Visuel 1]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> [Classe Visuel 1]</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Visuel</p>
                         </div>
                         
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Visuel 2]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Visuel 2]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Visuel 2]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Visuel</p>
-                            <p class="text-gray-600 italic">Graphiste en charge des thumbnails et des éléments graphiques.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> [Nom Visuel 2]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> [Prénom Visuel 2]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> [Classe Visuel 2]</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Visuel</p>
                         </div>
                         
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Visuel 3]</p>
-                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Visuel 3]</p>
-                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Visuel 3]</p>
-                            <p class="mb-4"><span class="font-medium">Rôle :</span> Visuel</p>
-                            <p class="text-gray-600 italic">Monteur vidéo et responsable des animations et transitions.</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md font-michroma">
+                            <p class="mb-2 font-michroma"><span class="font-medium">Nom :</span> [Nom Visuel 3]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Prénom :</span> [Prénom Visuel 3]</p>
+                            <p class="mb-2 font-michroma"><span class="font-medium">Classe :</span> [Classe Visuel 3]</p>
+                            <p class="mb-4 font-michroma"><span class="font-medium">Rôle :</span> Visuel</p>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-8">
-                        <h3 class="text-xl font-semibold mb-4 text-[#2E5FAA]">À Propos du Projet</h3>
-                        <p class="mb-4">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-8 font-michroma">
+                        <h3 class="text-xl font-semibold mb-4 text-[#2E5FAA] font-michroma">À Propos du Projet</h3>
+                        <p class="mb-4 font-michroma">
                             Ce projet a été développé dans le cadre de [Nom du Cours/Projet] à [Nom de l'École/Université]. 
                             L'objectif était de créer un site web moderne pour présenter une chaîne YouTube, en mettant 
                             l'accent sur l'expérience utilisateur et les technologies web actuelles.
                         </p>
-                        <p>
+                        <p class="font-michroma">
                             Nous avons utilisé HTML5, CSS3 avec Tailwind CSS, et JavaScript vanilla pour créer une 
                             interface réactive et attrayante. Le site présente les dernières vidéos et shorts YouTube 
                             tout en offrant une navigation fluide et intuitive.
@@ -220,7 +232,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <p class="copyright">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
+                <p class="copyright font-michroma">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

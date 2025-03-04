@@ -5,14 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content">
+    <meta name="description" content="Découvrez notre chaîne YouTube avec des vidéos et shorts sur des sujets passionnants. Rejoignez notre communauté et restez informé des dernières tendances.">
+    <meta name="keywords" content="youtube, chaîne youtube, vidéos, shorts, contenu digital">
+    <meta name="author" content="Votre Chaîne">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Votre Chaîne YouTube">
+    <meta property="og:description" content="Découvrez notre chaîne YouTube avec des vidéos et shorts sur des sujets passionnants.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.votrechaineyt.com">
+    <meta property="og:image" content="images/logo_v3.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <title>Votre Chaîne YouTube</title>
+    <title>Votre Chaîne YouTube - Contenu Digital Innovant</title>
+    
+    <!-- Preconnect pour améliorer les performances -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Styles CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="font-sans">
+<body>
     <!-- Fond binaire animé -->
     <!-- Fond parallax multi-couches -->
     <div class="parallax-container fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
@@ -78,7 +101,7 @@
         <div class="container mx-auto px-4">
             <div class="nav-wrapper flex justify-between items-center h-16">
                 <a href="#accueil" class="nav-logo">
-                    <img src="images/logo_v3.png" alt="Logo" class="h-8 mr-2">
+                    <img loading="lazy" src="images/logo_v3.png" alt="Logo" class="h-8 mr-2" width="32" height="32">
                 </a>
 
                 <!-- Menu Burger pour Mobile -->
@@ -125,7 +148,7 @@
                 <span class="title-underline"></span>
             </h2></div>
             <div class="relative rounded-lg overflow-hidden shadow-2xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 56.25%; height: 0;">
-                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_VIDEO?rel=0&modestbranding=1"
+                <iframe loading="lazy" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_VIDEO?rel=0&modestbranding=1"
                     frameborder="0" allowfullscreen loading="lazy" title="Vidéo YouTube" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
             </div>
         </div>
@@ -148,18 +171,50 @@
                 Nos Derniers Shorts
                 <span class="title-underline"></span>
             </h2></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
-                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_1?rel=0&modestbranding=1"
-                        frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 1" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+            <div class="simple-carousel-container">
+                <div class="simple-carousel">
+                    <!-- Short 1 -->
+                    <div class="simple-carousel-item active">
+                        <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_1?rel=0&modestbranding=1"
+                                frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 1" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                        </div>
+                    </div>
+                    <!-- Short 2 -->
+                    <div class="simple-carousel-item">
+                        <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_2?rel=0&modestbranding=1"
+                                frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 2" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                        </div>
+                    </div>
+                    <!-- Short 3 -->
+                    <div class="simple-carousel-item">
+                        <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_3?rel=0&modestbranding=1"
+                                frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 3" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
-                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_2?rel=0&modestbranding=1"
-                        frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 2" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
-                </div>
-                <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
-                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_3?rel=0&modestbranding=1"
-                        frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 3" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                
+                <!-- Contrôles du carrousel -->
+                <div class="simple-carousel-controls flex justify-center items-center mt-6 space-x-4">
+                    <button class="simple-carousel-prev bg-white text-[#2E5FAA] rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    
+                    <div class="simple-carousel-dots flex space-x-2">
+                        <button class="simple-carousel-dot active w-3 h-3 rounded-full bg-[#2E5FAA] transition-all duration-300" data-index="0"></button>
+                        <button class="simple-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-index="1"></button>
+                        <button class="simple-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-index="2"></button>
+                    </div>
+                    
+                    <button class="simple-carousel-next bg-white text-[#2E5FAA] rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
