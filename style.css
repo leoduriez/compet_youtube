@@ -6,6 +6,30 @@ body {
     overflow-x: hidden;
 }
 
+/* Styles pour les titres */
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    z-index: 1;
+}
+
+.title-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.title-underline {
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 3px;
+}
+
 /* Styles pour l'effet parallax multi-couches */
 .parallax-container {
     position: fixed;
