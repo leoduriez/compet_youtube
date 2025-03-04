@@ -14,11 +14,24 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8));
     overflow: hidden;
     z-index: -10;
     perspective: 1000px;
-    filter: blur(5px);
+    opacity: 0.7;
+}
+
+/* Overlay pour l'effet d'opalescence */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 95, 170, 0.1) 0%, rgba(35, 46, 91, 0.2) 100%);
+    pointer-events: none;
+    z-index: -5;
 }
 
 /* Couches parallax */
@@ -34,13 +47,12 @@ body {
 
 /* Fond étoilé pour la couche la plus éloignée */
 .stars-bg {
-    background-image: radial-gradient(circle, rgba(30, 64, 124, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(30, 64, 124, 0.15) 1px, transparent 1px);
     background-size: 50px 50px;
     width: 200%;
     height: 200%;
     top: -50%;
     left: -50%;
-    filter: blur(1px);
 }
 
 /* Groupes d'éléments binaires par couche */
@@ -57,10 +69,9 @@ body {
 .binary-element {
     position: absolute;
     font-weight: bold;
-    opacity: 0.9;
+    opacity: 0.6;
     text-shadow: 0 0 5px #376eb5;
     will-change: transform;
-    filter: blur(2px);
 }
 
 /* Couche éloignée - petits éléments, mouvement lent */
@@ -90,7 +101,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -5;
-    filter: blur(3px);
 }
 
 .floating-binary {
@@ -100,12 +110,11 @@ body {
     font-size: 0.8rem;
     color: #2e53a1;
     text-shadow: 0 0 8px rgba(55, 110, 181, 0.5);
-    opacity: 0.9;
+    opacity: 0.6;
     user-select: none;
     pointer-events: none;
     will-change: transform;
     animation: float 20s infinite ease-in-out;
-    filter: blur(2px);
 }
 
 /* Animation de flottement */
