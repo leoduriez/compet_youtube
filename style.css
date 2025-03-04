@@ -4,30 +4,7 @@ body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-}
-
-/* Styles pour les titres */
-h1, h2, h3, h4, h5, h6 {
     position: relative;
-    z-index: 1;
-}
-
-.title-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-}
-
-.title-underline {
-    position: absolute;
-    bottom: -5px;
-    left: 10%;
-    width: 80%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    border-radius: 3px;
 }
 
 /* Styles pour l'effet parallax multi-couches */
@@ -41,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     z-index: -10;
     perspective: 1000px;
+    filter: blur(5px);
 }
 
 /* Couches parallax */
@@ -62,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 200%;
     top: -50%;
     left: -50%;
+    filter: blur(1px);
 }
 
 /* Groupes d'éléments binaires par couche */
@@ -81,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9;
     text-shadow: 0 0 5px #376eb5;
     will-change: transform;
+    filter: blur(2px);
 }
 
 /* Couche éloignée - petits éléments, mouvement lent */
@@ -110,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     z-index: -5;
+    filter: blur(3px);
 }
 
 .floating-binary {
@@ -124,6 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
     will-change: transform;
     animation: float 20s infinite ease-in-out;
+    filter: blur(2px);
 }
 
 /* Animation de flottement */
