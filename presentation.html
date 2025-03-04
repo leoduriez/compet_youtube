@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content">
+    <title>Présentation - Votre Chaîne</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blur-section {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Fond binaire animé -->
+    <!-- Fond parallax multi-couches -->
+    <div class="parallax-container fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
+        <!-- Couche la plus éloignée (se déplace lentement) -->
+        <div class="parallax-layer layer-bg absolute inset-0 w-full h-full">
+            <div class="stars-bg absolute inset-0"></div>
+        </div>
+        
+        <!-- Couche intermédiaire (vitesse moyenne) -->
+        <div class="parallax-layer layer-mid absolute inset-0 w-full h-full">
+            <div class="binary-group binary-far">
+                <div class="binary-element">01001011</div>
+                <div class="binary-element">10110010</div>
+                <div class="binary-element">11010101</div>
+                <div class="binary-element">00111100</div>
+                <div class="binary-element">01101001</div>
+            </div>
+        </div>
+        
+        <!-- Couche proche (se déplace rapidement) -->
+        <div class="parallax-layer layer-front absolute inset-0 w-full h-full">
+            <div class="binary-group binary-near">
+                <div class="binary-element">10010111</div>
+                <div class="binary-element">11001010</div>
+                <div class="binary-element">00101101</div>
+                <div class="binary-element">01011010</div>
+                <div class="binary-element">10100110</div>
+            </div>
+        </div>
+        
+        <!-- Couche très proche (se déplace très rapidement) -->
+        <div class="parallax-layer layer-closest absolute inset-0 w-full h-full">
+            <div class="binary-group binary-closest">
+                <div class="binary-element">01100111</div>
+                <div class="binary-element">10011001</div>
+                <div class="binary-element">11100010</div>
+                <div class="binary-element">00010111</div>
+                <div class="binary-element">01110100</div>
+            </div>
+        </div>
+        
+        <!-- Éléments binaires flottants avec des positions aléatoires -->
+        <div class="floating-elements">
+            <div class="floating-binary" style="left: 10%; top: 15%;">10001011</div>
+            <div class="floating-binary" style="left: 25%; top: 45%;">11011100</div>
+            <div class="floating-binary" style="left: 40%; top: 75%;">00110010</div>
+            <div class="floating-binary" style="left: 60%; top: 25%;">01010011</div>
+            <div class="floating-binary" style="left: 75%; top: 60%;">10101100</div>
+            <div class="floating-binary" style="left: 90%; top: 85%;">01001110</div>
+            <div class="floating-binary" style="left: 15%; top: 90%;">10110101</div>
+            <div class="floating-binary" style="left: 30%; top: 30%;">11010011</div>
+            <div class="floating-binary" style="left: 45%; top: 5%;">00111010</div>
+            <div class="floating-binary" style="left: 70%; top: 40%;">01101101</div>
+            <div class="floating-binary" style="left: 85%; top: 10%;">10010110</div>
+            <div class="floating-binary" style="left: 5%; top: 55%;">11001001</div>
+            <div class="floating-binary" style="left: 55%; top: 95%;">00101110</div>
+            <div class="floating-binary" style="left: 80%; top: 70%;">01011101</div>
+            <div class="floating-binary" style="left: 95%; top: 35%;">10100101</div>
+        </div>
+    </div>
+
+    <nav class="nav-container fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="nav-wrapper flex justify-between items-center h-16">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo_v3.png" alt="Logo" class="h-8 mr-2">
+                </a>
+
+                <!-- Menu Burger pour Mobile -->
+                <button class="menu-toggle md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="nav-menu lg:flex lg:items-center">
+                    <ul class="nav-links flex-col lg:flex-row lg:space-x-8">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li class="nav-item"><a href="index.html#video" class="nav-link">Vidéo</a></li>
+                        <li class="nav-item"><a href="index.html#shorts" class="nav-link">Shorts</a></li>
+                        <li class="nav-item"><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                        <li class="nav-item"><a href="presentation.html" class="nav-link active">Présentation</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">À Propos de nous</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-12 bg-gradient-to-r from-[#232e5b] via-[#2e53a1] to-[#376eb5]">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Présentation de la Chaîne</h1>
+        </div>
+    </header>
+
+    <section id="description" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Description de la Chaîne</h2>
+            <div class="prose max-w-none">
+                [Description détaillée de votre chaîne]
+            </div>
+        </div>
+    </section>
+
+    <section id="benchmark" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Benchmark</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-transparent rounded-lg overflow-hidden shadow-lg">
+                    <thead class="bg-[#2e53a1]">
+                        <tr>
+                            <th class="px-6 py-3 text-left font-bold text-black">Critères</th>
+                            <th class="px-6 py-3 text-left font-bold text-black">Notre Chaîne</th>
+                            <th class="px-6 py-3 text-left font-bold text-black">Concurrent 1</th>
+                            <th class="px-6 py-3 text-left font-bold text-black">Concurrent 2</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <!-- Métriques de base -->
+                        <tr class="bg-transparent">
+                            <td colspan="4" class="px-6 py-3 font-semibold">Métriques de base</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Nombre d'abonnés</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Nombre total de vidéos</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Date de création</td>
+                            <td class="px-6 py-4 text-center">[Date]</td>
+                            <td class="px-6 py-4 text-center">[Date]</td>
+                            <td class="px-6 py-4 text-center">[Date]</td>
+                        </tr>
+
+                        <!-- Engagement -->
+                        <tr class="bg-transparent">
+                            <td colspan="4" class="px-6 py-3 font-semibold">Engagement</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Moyenne des vues</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Taux d'engagement moyen</td>
+                            <td class="px-6 py-4 text-center">[%]</td>
+                            <td class="px-6 py-4 text-center">[%]</td>
+                            <td class="px-6 py-4 text-center">[%]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Ratio likes/dislikes</td>
+                            <td class="px-6 py-4 text-center">[Ratio]</td>
+                            <td class="px-6 py-4 text-center">[Ratio]</td>
+                            <td class="px-6 py-4 text-center">[Ratio]</td>
+                        </tr>
+
+                        <!-- Contenu -->
+                        <tr class="bg-transparent">
+                            <td colspan="4" class="px-6 py-3 font-semibold">Contenu</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Fréquence de publication</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                            <td class="px-6 py-4 text-center">[Valeur]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Durée moyenne des vidéos</td>
+                            <td class="px-6 py-4 text-center">[Durée]</td>
+                            <td class="px-6 py-4 text-center">[Durée]</td>
+                            <td class="px-6 py-4 text-center">[Durée]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Qualité de production</td>
+                            <td class="px-6 py-4 text-center">[Note/5]</td>
+                            <td class="px-6 py-4 text-center">[Note/5]</td>
+                            <td class="px-6 py-4 text-center">[Note/5]</td>
+                        </tr>
+
+                        <!-- Monétisation -->
+                        <tr class="bg-transparent">
+                            <td colspan="4" class="px-6 py-3 font-semibold">Monétisation</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Sponsors/Partenariats</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Produits dérivés</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Autres revenus</td>
+                            <td class="px-6 py-4 text-center">[Description]</td>
+                            <td class="px-6 py-4 text-center">[Description]</td>
+                            <td class="px-6 py-4 text-center">[Description]</td>
+                        </tr>
+
+                        <!-- Communauté -->
+                        <tr class="bg-transparent">
+                            <td colspan="4" class="px-6 py-3 font-semibold">Communauté</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Interaction commentaires</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Présence réseaux sociaux</td>
+                            <td class="px-6 py-4 text-center">[Plateformes]</td>
+                            <td class="px-6 py-4 text-center">[Plateformes]</td>
+                            <td class="px-6 py-4 text-center">[Plateformes]</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Communauté Discord</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                            <td class="px-6 py-4 text-center">[Oui/Non]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="swot" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Analyse SWOT</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-green-100 p-6 rounded-lg">
+                    <h3 class="font-bold mb-4">Forces (Strengths)</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Force 1</li>
+                        <li>Force 2</li>
+                    </ul>
+                </div>
+                <div class="bg-red-100 p-6 rounded-lg">
+                    <h3 class="font-bold mb-4">Faiblesses (Weaknesses)</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Faiblesse 1</li>
+                        <li>Faiblesse 2</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-100 p-6 rounded-lg">
+                    <h3 class="font-bold mb-4">Opportunités (Opportunities)</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Opportunité 1</li>
+                        <li>Opportunité 2</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-100 p-6 rounded-lg">
+                    <h3 class="font-bold mb-4">Menaces (Threats)</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Menace 1</li>
+                        <li>Menace 2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="charte" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Charte Graphique</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold mb-4">Typographie</h3>
+                    <div class="space-y-2">
+                        <p class="font-sans">Police principale: [Nom]</p>
+                        <p class="font-serif">Police secondaire: [Nom]</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold mb-4">Direction Artistique</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="h-20 bg-[#232e5b]"></div>
+                        <div class="h-20 bg-[#2e53a1]"></div>
+                        <div class="h-20 bg-[#376eb5]"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold mb-4">Sons</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Musique d'intro</li>
+                        <li>Effets sonores</li>
+                        <li>Outro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="personae" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Personae</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
+                    <thead class="bg-[#2e53a1]">
+                        <tr>
+                            <th class="px-6 py-3 font-bold text-black">Profil</th>
+                            <th class="px-6 py-3 font-bold text-black">Âge</th>
+                            <th class="px-6 py-3 font-bold text-black">Intérêts</th>
+                            <th class="px-6 py-3 font-bold text-black">Comportements</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4">Persona 1</td>
+                            <td class="px-6 py-4">[Âge]</td>
+                            <td class="px-6 py-4">[Intérêts]</td>
+                            <td class="px-6 py-4">[Comportements]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="objectifs" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Objectifs</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold mb-2">Objectif 1</h3>
+                    <p>[Description de l'objectif]</p>
+                </div>
+                <!-- Ajoutez d'autres objectifs -->
+            </div>
+        </div>
+    </section>
+
+    <section id="message" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Message</h2>
+            <div class="prose max-w-none">
+                [Message principal de la chaîne]
+            </div>
+        </div>
+    </section>
+
+    <section id="ton" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Ton et Vocabulaire</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-transparent p-6 rounded-lg shadow">
+                    <h3 class="font-bold mb-4">Ton</h3>
+                    [Description du ton utilisé]
+                </div>
+                <div class="bg-transparent p-6 rounded-lg shadow">
+                    <h3 class="font-bold mb-4">Vocabulaire</h3>
+                    [Liste des termes spécifiques]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="storytelling" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Storytelling</h2>
+            <div class="prose max-w-none">
+                [Description de votre approche narrative]
+            </div>
+        </div>
+    </section>
+
+    <section id="storyboard" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Storyboard</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Ajoutez vos images de storyboard ici -->
+                <div class="bg-transparent p-4 rounded-lg shadow">
+                    <img src="[URL-image]" alt="Scene 1" class="w-full h-auto rounded">
+                    <p class="mt-2 text-sm">Description de la scène 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sma" class="py-12 blur-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-[#232e5b]">Stratégie Marketing Instagram</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-transparent p-6 rounded-lg">
+                    <h3 class="font-bold mb-4">Stratégie de Contenu</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Type de contenu</li>
+                        <li>Fréquence de publication</li>
+                        <li>Hashtags principaux</li>
+                    </ul>
+                </div>
+                <div class="bg-transparent p-6 rounded-lg">
+                    <h3 class="font-bold mb-4">Planification</h3>
+                    <ul class="list-disc pl-4">
+                        <li>Calendrier éditorial</li>
+                        <li>Objectifs de croissance</li>
+                        <li>KPIs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#232e5b] text-white py-8">
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center mb-4">
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-youtube text-2xl"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-tiktok text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="text-[#2E5FAA]">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Moi - Votre Chaîne YouTube</title>
+    <meta name="description" content="Découvrez l'équipe derrière ce projet de chaîne YouTube">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Fond binaire animé -->
+    <!-- Fond parallax multi-couches -->
+    <div class="parallax-container fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
+        <!-- Couche la plus éloignée (se déplace lentement) -->
+        <div class="parallax-layer layer-bg absolute inset-0 w-full h-full">
+            <div class="stars-bg absolute inset-0"></div>
+        </div>
+        
+        <!-- Couche intermédiaire (vitesse moyenne) -->
+        <div class="parallax-layer layer-mid absolute inset-0 w-full h-full">
+            <div class="binary-group binary-far">
+                <div class="binary-element">10110101</div>
+                <div class="binary-element">01001101</div>
+                <div class="binary-element">11010010</div>
+                <div class="binary-element">00101011</div>
+                <div class="binary-element">10011010</div>
+            </div>
+        </div>
+        
+        <!-- Couche proche (se déplace rapidement) -->
+        <div class="parallax-layer layer-front absolute inset-0 w-full h-full">
+            <div class="binary-group binary-near">
+                <div class="binary-element">01101001</div>
+                <div class="binary-element">10010110</div>
+                <div class="binary-element">01011001</div>
+                <div class="binary-element">10100101</div>
+                <div class="binary-element">01010110</div>
+            </div>
+        </div>
+        
+        <!-- Couche très proche (se déplace très rapidement) -->
+        <div class="parallax-layer layer-closest absolute inset-0 w-full h-full">
+            <div class="binary-group binary-closest">
+                <div class="binary-element">11100010</div>
+                <div class="binary-element">00010111</div>
+                <div class="binary-element">01110100</div>
+            </div>
+        </div>
+        
+        <!-- Éléments binaires flottants avec des positions aléatoires -->
+        <div class="floating-elements">
+            <div class="floating-binary" style="left: 10%; top: 15%;">10001011</div>
+            <div class="floating-binary" style="left: 25%; top: 45%;">11011100</div>
+            <div class="floating-binary" style="left: 40%; top: 75%;">00110010</div>
+            <div class="floating-binary" style="left: 60%; top: 25%;">01010011</div>
+            <div class="floating-binary" style="left: 75%; top: 60%;">10101100</div>
+            <div class="floating-binary" style="left: 90%; top: 85%;">01001110</div>
+            <div class="floating-binary" style="left: 15%; top: 90%;">10110101</div>
+            <div class="floating-binary" style="left: 30%; top: 30%;">11010011</div>
+            <div class="floating-binary" style="left: 45%; top: 5%;">00111010</div>
+            <div class="floating-binary" style="left: 70%; top: 40%;">01101101</div>
+            <div class="floating-binary" style="left: 85%; top: 10%;">10010110</div>
+            <div class="floating-binary" style="left: 5%; top: 55%;">11001001</div>
+            <div class="floating-binary" style="left: 55%; top: 95%;">00101110</div>
+            <div class="floating-binary" style="left: 80%; top: 70%;">01011101</div>
+            <div class="floating-binary" style="left: 95%; top: 35%;">10100101</div>
+        </div>
+    </div>
+
+    <nav class="nav-container fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="nav-wrapper flex justify-between items-center h-16">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo_v3.png" alt="Logo" class="h-8 mr-2">
+                </a>
+
+                <!-- Menu Burger pour Mobile -->
+                <button class="menu-toggle md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="nav-menu lg:flex lg:items-center">
+                    <ul class="nav-links flex-col lg:flex-row lg:space-x-8">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li class="nav-item"><a href="index.html#video" class="nav-link">Vidéo</a></li>
+                        <li class="nav-item"><a href="index.html#shorts" class="nav-link">Shorts</a></li>
+                        <li class="nav-item"><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                        <li class="nav-item"><a href="presentation.html" class="nav-link">Présentation</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link active">À Propos de nous</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-12 bg-gradient-to-r from-[#232e5b] via-[#2e53a1] to-[#376eb5]">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">À Propos de Nous</h1>
+            <p class="text-xl text-white/80">Découvrez l'équipe derrière ce projet</p>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-center">Notre Équipe</h2>
+                    
+                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA]">Développeurs Web</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Développeur 1]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Développeur 1]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Développeur 1]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Développeur Web</p>
+                            <p class="text-gray-600 italic">Responsable du développement frontend et de l'intégration des éléments interactifs.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Développeur 2]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Développeur 2]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Développeur 2]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Développeur Web</p>
+                            <p class="text-gray-600 italic">Chargé de l'architecture technique, de l'optimisation des performances et de la compatibilité cross-browser.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA]">Marketing & Stratégie</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Marketing 1]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Marketing 1]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Marketing 1]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
+                            <p class="text-gray-600 italic">Responsable de la stratégie de contenu et du positionnement de la chaîne.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Marketing 2]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Marketing 2]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Marketing 2]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
+                            <p class="text-gray-600 italic">Chargé de l'analyse des tendances et de l'optimisation SEO.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Marketing 3]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Marketing 3]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Marketing 3]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Marketing & Stratégie</p>
+                            <p class="text-gray-600 italic">Responsable des partenariats et de la croissance de l'audience.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mb-6 text-[#2E5FAA]">Équipe Visuelle</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Visuel 1]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Visuel 1]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Visuel 1]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Visuel</p>
+                            <p class="text-gray-600 italic">Designer UI/UX responsable de l'identité visuelle du site.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Visuel 2]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Visuel 2]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Visuel 2]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Visuel</p>
+                            <p class="text-gray-600 italic">Graphiste en charge des thumbnails et des éléments graphiques.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <p class="mb-2"><span class="font-medium">Nom :</span> [Nom Visuel 3]</p>
+                            <p class="mb-2"><span class="font-medium">Prénom :</span> [Prénom Visuel 3]</p>
+                            <p class="mb-2"><span class="font-medium">Classe :</span> [Classe Visuel 3]</p>
+                            <p class="mb-4"><span class="font-medium">Rôle :</span> Visuel</p>
+                            <p class="text-gray-600 italic">Monteur vidéo et responsable des animations et transitions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-[#2E5FAA]">À Propos du Projet</h3>
+                        <p class="mb-4">
+                            Ce projet a été développé dans le cadre de [Nom du Cours/Projet] à [Nom de l'École/Université]. 
+                            L'objectif était de créer un site web moderne pour présenter une chaîne YouTube, en mettant 
+                            l'accent sur l'expérience utilisateur et les technologies web actuelles.
+                        </p>
+                        <p>
+                            Nous avons utilisé HTML5, CSS3 avec Tailwind CSS, et JavaScript vanilla pour créer une 
+                            interface réactive et attrayante. Le site présente les dernières vidéos et shorts YouTube 
+                            tout en offrant une navigation fluide et intuitive.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="index.html" class="inline-block px-6 py-3 bg-[#2E5FAA] text-white font-medium rounded-lg hover:bg-[#5A8AD3] transition duration-300">Retour à l'accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center mb-4">
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-youtube text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-tiktok text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="copyright">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

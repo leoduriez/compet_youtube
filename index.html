@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content">
+
+    <title>Votre Chaîne YouTube</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans">
+    <!-- Fond binaire animé -->
+    <!-- Fond parallax multi-couches -->
+    <div class="parallax-container fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
+        <!-- Couche la plus éloignée (se déplace lentement) -->
+        <div class="parallax-layer layer-bg absolute inset-0 w-full h-full">
+            <div class="stars-bg absolute inset-0"></div>
+        </div>
+        
+        <!-- Couche intermédiaire (vitesse moyenne) -->
+        <div class="parallax-layer layer-mid absolute inset-0 w-full h-full">
+            <div class="binary-group binary-far">
+                <div class="binary-element">01001011</div>
+                <div class="binary-element">10110010</div>
+                <div class="binary-element">11010101</div>
+                <div class="binary-element">00111100</div>
+                <div class="binary-element">01101001</div>
+            </div>
+        </div>
+        
+        <!-- Couche proche (se déplace rapidement) -->
+        <div class="parallax-layer layer-front absolute inset-0 w-full h-full">
+            <div class="binary-group binary-near">
+                <div class="binary-element">10010111</div>
+                <div class="binary-element">11001010</div>
+                <div class="binary-element">00101101</div>
+                <div class="binary-element">01011010</div>
+                <div class="binary-element">10100110</div>
+            </div>
+        </div>
+        
+        <!-- Couche très proche (se déplace très rapidement) -->
+        <div class="parallax-layer layer-closest absolute inset-0 w-full h-full">
+            <div class="binary-group binary-closest">
+                <div class="binary-element">01100111</div>
+                <div class="binary-element">10011001</div>
+                <div class="binary-element">11100010</div>
+                <div class="binary-element">00010111</div>
+                <div class="binary-element">01110100</div>
+            </div>
+        </div>
+        
+        <!-- Éléments binaires flottants avec des positions aléatoires -->
+        <div class="floating-elements">
+            <div class="floating-binary" style="left: 10%; top: 15%;">10001011</div>
+            <div class="floating-binary" style="left: 25%; top: 45%;">11011100</div>
+            <div class="floating-binary" style="left: 40%; top: 75%;">00110010</div>
+            <div class="floating-binary" style="left: 60%; top: 25%;">01010011</div>
+            <div class="floating-binary" style="left: 75%; top: 60%;">10101100</div>
+            <div class="floating-binary" style="left: 90%; top: 85%;">01001110</div>
+            <div class="floating-binary" style="left: 15%; top: 90%;">10110101</div>
+            <div class="floating-binary" style="left: 30%; top: 30%;">11010011</div>
+            <div class="floating-binary" style="left: 45%; top: 5%;">00111010</div>
+            <div class="floating-binary" style="left: 70%; top: 40%;">01101101</div>
+            <div class="floating-binary" style="left: 85%; top: 10%;">10010110</div>
+            <div class="floating-binary" style="left: 5%; top: 55%;">11001001</div>
+            <div class="floating-binary" style="left: 55%; top: 95%;">00101110</div>
+            <div class="floating-binary" style="left: 80%; top: 70%;">01011101</div>
+            <div class="floating-binary" style="left: 95%; top: 35%;">10100101</div>
+        </div>
+    </div>
+
+    <nav class="nav-container fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="nav-wrapper flex justify-between items-center h-16">
+                <a href="#accueil" class="nav-logo">
+                    <img src="images/logo_v3.png" alt="Logo" class="h-8 mr-2">
+                </a>
+
+                <!-- Menu Burger pour Mobile -->
+                <button class="menu-toggle md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="nav-menu lg:flex lg:items-center">
+                    <ul class="nav-links flex-col lg:flex-row lg:space-x-8">
+                        <li class="nav-item"><a href="#accueil" class="nav-link">Accueil</a></li>
+                        <li class="nav-item"><a href="#video" class="nav-link">Vidéo</a></li>
+                        <li class="nav-item"><a href="#shorts" class="nav-link">Shorts</a></li>
+                        <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li class="nav-item"><a href="presentation.html" class="nav-link">Présentation</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">À Propos de nous</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="accueil" class="relative h-screen bg-cover bg-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/50 to-blue-800/30"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+            <div>
+                <h1 class="text-6xl font-bold mb-6 text-shadow-lg">Bienvenue sur Votre Chaîne</h1>
+                <p class="text-xl mb-8">Découvrez nos dernières vidéos et shorts !</p>
+                <div class="video-redirect-container">
+                    <a href="#video-section" class="video-redirect-btn">
+                        <i class="fas fa-play mr-2"></i>Voir la vidéo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="video" class="py-20 bg-transparent">
+        <div id="video-section" class="container mx-auto">
+            <div class="text-center mb-12"><h2 class="text-4xl font-extrabold relative text-white title-shadow bg-[#2E5FAA]/80 inline-block px-6 py-2 rounded-lg">
+                Notre Vidéo Vedette
+                <span class="title-underline"></span>
+            </h2></div>
+            <div class="relative rounded-lg overflow-hidden shadow-2xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 56.25%; height: 0;">
+                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_VIDEO?rel=0&modestbranding=1"
+                    frameborder="0" allowfullscreen loading="lazy" title="Vidéo YouTube" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-section relative h-[600px] overflow-hidden">
+        <div class="parallax-bg" style="background-color: #232e5b;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-blue-800/30"></div>
+        <div class="parallax-content absolute inset-0 flex items-center justify-center text-center text-white">
+            <div>
+                <h2 class="text-5xl font-bold mb-6 text-shadow-lg">Découvrez Notre Contenu</h2>
+                <p class="text-xl">Une expérience unique à travers nos vidéos</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="shorts" class="py-20 bg-transparent">
+        <div class="container mx-auto">
+            <div class="text-center mb-12"><h2 class="text-4xl font-extrabold relative text-white title-shadow bg-[#2E5FAA]/80 inline-block px-6 py-2 rounded-lg">
+                Nos Derniers Shorts
+                <span class="title-underline"></span>
+            </h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_1?rel=0&modestbranding=1"
+                        frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 1" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_2?rel=0&modestbranding=1"
+                        frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 2" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-xl bg-[#2E5FAA]/80 p-2" style="padding-bottom: 177.78%; height: 0;">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VOTRE_ID_SHORT_3?rel=0&modestbranding=1"
+                        frameborder="0" allowfullscreen loading="lazy" title="Short YouTube 3" sandbox="allow-same-origin allow-scripts allow-presentation"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-transparent">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12"><h2 class="text-4xl font-extrabold relative text-white title-shadow bg-[#2E5FAA]/80 inline-block px-6 py-2 rounded-lg">
+                FAQ
+                <span class="title-underline"></span>
+            </h2></div>
+            <div class="max-w-3xl mx-auto">
+                <div class="faq-item mb-4">
+                    <button class="faq-question w-full flex items-center justify-between p-6 bg-[#2E5FAA]/80 bg-[#2E5FAA]/80 rounded-lg text-white">
+                        <span class="text-xl font-semibold">Qui a travaillé sur ce projet ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 bg-[#2E5FAA]/70 rounded-b-lg text-white">
+                            <p class="text-gray-300">Réponse 1</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item mb-4">
+                    <button class="faq-question w-full flex items-center justify-between p-6 bg-[#2E5FAA]/80 bg-[#2E5FAA]/80 rounded-lg text-white">
+                        <span class="text-xl font-semibold">De quoi parle cette vidéo ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 bg-[#2E5FAA]/70 rounded-b-lg text-white">
+                            <p class="text-gray-300">Réponse 2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item mb-4">
+                    <button class="faq-question w-full flex items-center justify-between p-6 bg-[#2E5FAA]/80 bg-[#2E5FAA]/80 rounded-lg text-white">
+                        <span class="text-xl font-semibold">Avec quel matériel as-tu filmé/édité cette vidéo ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 bg-[#2E5FAA]/70 rounded-b-lg text-white">
+                            <p class="text-gray-300">Réponse 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-transparent text-white py-8">
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center mb-4">
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-youtube text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-tiktok text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 font-semibold" style="color: #2E5FAA;">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
