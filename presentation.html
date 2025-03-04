@@ -7,10 +7,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content">
     <title>Présentation - Votre Chaîne</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .blur-section {
-            backdrop-filter: blur(8px);
+            /* Suppression de l'effet de flou */
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 1rem;
         }
@@ -18,6 +19,7 @@
 </head>
 
 <body class="font-sans">
+    <div class="content-wrapper">
     <!-- Fond binaire animé -->
     <!-- Fond parallax multi-couches -->
     <div class="parallax-container fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
@@ -108,7 +110,7 @@
         </div>
     </nav>
 
-    <header class="pt-24 pb-12 bg-gradient-to-r from-[#232e5b] via-[#2e53a1] to-[#376eb5]">
+    <header class="pt-24 pb-12 bg-gradient-to-r from-[#232e5b]/90 via-[#2e53a1]/90 to-[#376eb5]/90">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl font-bold text-white mb-4">Présentation de la Chaîne</h1>
         </div>
@@ -434,18 +436,19 @@
         </div>
     </section>
 
-    <footer class="bg-[#232e5b] text-white py-8">
-        <div class="container mx-auto">
+    </div>
+    <footer class="py-8 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4">
             <div class="flex justify-center items-center mb-4">
                 <div class="flex space-x-6">
-                    <a href="https://www.youtube.com/@leurrenumerique" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-youtube text-2xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
-                    <a href="https://www.instagram.com/leurre_numerique?igsh=MWkyajh1YjQyOWxyNA%3D%3D&utm_source=qr" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-instagram text-2xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-tiktok text-2xl"></i></a>
+                    <a href="https://www.youtube.com/@leurrenumerique" target="_blank" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-youtube text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="https://www.instagram.com/leurre_numerique?igsh=MWkyajh1YjQyOWxyNA%3D%3D&utm_source=qr" target="_blank" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-[#2E5FAA]"><i class="fab fa-tiktok text-2xl"></i></a>
                 </div>
             </div>
             <div class="text-center">
-                <p class="text-[#2E5FAA]">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
+                <p class="copyright">&copy; 2025 Votre Chaîne. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
